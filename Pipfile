@@ -5,9 +5,9 @@ name = "pypi"
 
 [packages]
 fastapi = {extras = ["all"], version = "*"}
-ormar = {extras = ["postgresql"], version = "*"}
 httpx = "*"
 parsel = "*"
+sqlalchemy = {extras = ["asyncio"], version = "*"}
 
 [dev-packages]
 
