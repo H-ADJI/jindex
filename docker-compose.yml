@@ -6,8 +6,11 @@ services:
     restart: always
     ports:
       - 5432:5432
+    volumes:
+      - jindex-data:/var/lib/postgresql/data
     networks:
       - dev
+
   pgadmin:
     image: dpage/pgadmin4
     depends_on:
@@ -19,3 +22,6 @@ services:
       - dev
 networks:
   dev: null
+volumes:
+  jindex-data:
+  
